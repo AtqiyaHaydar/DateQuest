@@ -53,16 +53,20 @@ export default function Home() {
         >
           Yes
         </button>
-        <button 
-          className={`absolute translate-x-[100px] w-[175px] rounded-full px-4 py-2 font-semibold border-2 border-[#FF0080] bg-white/15 shadow-md shadow-black/5 text-[#FF0080]`}
-          style={{ left: position.x, top: position.y }}
-          onClick={() => {
-            setState(true);
-          }}
-          onMouseEnter={handleMouseEnter}
-        >
-          No
-        </button>
+        {
+          state && (
+            <button 
+              className={`absolute translate-x-[100px] w-[175px] rounded-full px-4 py-2 font-semibold border-2 border-[#FF0080] bg-white/15 shadow-md shadow-black/5 text-[#FF0080]`}
+              style={{ left: position.x, top: position.y }}
+              // onClick={() => {
+              //   setState(true);
+              // }}
+              onMouseEnter={handleMouseEnter}
+            >
+              No
+            </button>
+          )
+        }
       </div>
     </main>
   );
